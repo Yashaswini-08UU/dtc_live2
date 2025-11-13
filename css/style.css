@@ -4608,6 +4608,7 @@ body {
   }
   .full-width-image-container img {
     width: 96%;
+    margin-top: -5rem;
   }
 
   .wireframes-text,
@@ -4790,7 +4791,8 @@ strong {
   /* ✅ Keep blue background (mil-dark-bg) aligned full width */
   .mil-dark-bg {
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 58px;
+    width:118%;
   }
 
   /* ✅ Ensure smooth animation consistency */
@@ -4835,7 +4837,7 @@ strong {
 
   .mil-mb-30 {
     margin-bottom: 30px;
-     padding-left: 3.1vw  !important;
+     padding-left: 1.1vw  !important;
     padding-right: 3.1vw !important;
 
 }
