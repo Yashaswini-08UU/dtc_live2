@@ -4611,12 +4611,14 @@ body {
     margin-top: -5rem;
   }
 
-  .wireframes-text,
-  .wireframes-title,
+   .wireframes-text,
   .card-body {
     margin-left: 0;
     margin-right: 0;
   }
+    .wireframes-title{
+      margin-left: -0.7rem;
+    }
 }
 
 @media (max-width: 768px) {
