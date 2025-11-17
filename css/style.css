@@ -493,11 +493,7 @@ a {
      object-position: center;
 }
 
-/* -------------------------------------------
-
-link
-
-------------------------------------------- */
+/* link */
 .mil-link {
   cursor: pointer;
   display: -webkit-inline-box;
