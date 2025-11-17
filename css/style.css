@@ -4864,4 +4864,19 @@ strong {
     padding-left: 11vw; /* shift bullets slightly right */
   }
 }
-
+.mil-accordion-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.mil-accordion-head1 {
+  flex: 1;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .mil-symbol {
+    transform: scale(0.8);
+    margin-right: 1rem;
+  }
+}
