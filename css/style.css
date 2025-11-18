@@ -4922,3 +4922,61 @@ strong {
   font-size: 2rem;
 }
 }
+
+
+
+/* do not change any layout/size properties of the original button */
+.fancy-swipe {
+  position: relative;      /* only added positioning, no layout changes */
+  overflow: hidden;        /* keeps the swipe layer inside the button */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* swipe layer: covers whole button but sits behind text/arrow */
+.fancy-swipe::before {
+  content: "";
+  position: absolute;
+  inset: 0;                       /* top:0; right:0; bottom:0; left:0; */
+  left: -110%;                    /* start fully off to the left */
+  width: 220%;                    /* wide enough for skewed diagonal swipe */
+  transform: translateX(-100%) skewX(-12deg);
+  transform-origin: left center;
+  background-color: #ffd000;      /* yellow */
+  transition: transform 0.55s cubic-bezier(.2,.9,.3,1);
+  z-index: 1;                     /* under the text/arrow */
+  pointer-events: none;
+}
+
+/* on hover the yellow layer slides in from left to right */
+.fancy-swipe:hover::before,
+.fancy-swipe:focus::before {
+  transform: translateX(0) skewX(-12deg);
+}
+
+/* ensure button text stays on top (unchanged size/spacing) */
+.fancy-swipe > span {
+  position: relative;
+  z-index: 3;
+  transition: color 0.25s ease;
+}
+
+/* if your button has the arrow circle using the same class (mil-arrow-place),
+   keep it on top too so the overlay doesn't obscure it */
+.fancy-swipe.mil-arrow-place span,
+.fancy-swipe .mil-arrow-place,
+.fancy-swipe .mil-arrow {
+  position: relative;
+  z-index: 3;
+}
+
+/* optional — subtle text color shift so contrast remains clear over yellow */
+.fancy-swipe:hover > span,
+.fancy-swipe:focus > span {
+  color: #061019; /* dark text on yellow — tweak if you want white instead */
+}
+
+/* accessibility: keyboard focus should show swipe as well */
+.fancy-swipe:focus {
+  outline: none;
+}
