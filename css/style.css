@@ -845,8 +845,8 @@ backgrounds
   pointer-events: all;
 }
 
-.mil-soft-bg {
-  background-color:#050B16;
+.mil-soft-bg1 {
+  background-color: #050B16;
 }
 
 /* -------------------------------------------
@@ -904,9 +904,9 @@ spaces
   }
 }
 
-.mil-p-120-120 {
-  padding-top: 209px;
-  padding-bottom: 195px;
+ .mil-p-120-120 {
+  padding-top: 250px;
+  padding-bottom: 232px;
 }
 @media screen and (max-width: 992px) {
   .mil-p-120-120 {
