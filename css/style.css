@@ -2897,6 +2897,30 @@ blog
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
+
+/* Base state */
+.mil-blog-card .mil-cover-frame {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  will-change: transform;
+}
+
+.mil-blog-card .mil-cover-frame img {
+  transition: transform 0.75s ease;
+}
+
+/* Strong hover effect — image lifts + zooms */
+.mil-blog-card:hover .mil-cover-frame {
+  transform: translateY(-2vh);     /* LIFT UP */
+  box-shadow: 0 2vh 4vh rgba(0,0,0,0.35);  /* Depth */
+}
+
+.mil-blog-card:hover .mil-cover-frame img {
+  transform: scale(1.25);          /* STRONG ZOOM */
+}
+
+
+
+
 .mil-blog-card.mil-blog-card-hori {
   padding-top: 60px;
   border-top: solid 1px rgb(229, 229, 229);
