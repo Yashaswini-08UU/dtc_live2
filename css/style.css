@@ -4620,10 +4620,11 @@ body {
 @media (max-width: 768px) {
     .mil-p-60-0 .mil-mb-60 {
         margin-bottom: 10px !important;
+        font-size: 1.15rem;
     }
     .mil-p-60-0 .mil-mb-30 {
         margin-bottom: 10px !important;
-        margin-left: -0.8rem;
+        margin-left: -0.5rem;
     }
     .mil-p-60-0 .row > .col-lg-2 {
         margin-bottom: 0 !important;
