@@ -4994,7 +4994,6 @@ strong {
   z-index: 3;
 }
 
-/* optional — subtle text color shift so contrast remains clear over yellow */
 .fancy-swipe:hover > span,
 .fancy-swipe:focus > span {
   color: #061019; /* dark text on yellow — tweak if you want white instead */
